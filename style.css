@@ -381,11 +381,37 @@ body {
     background: #e2e8f0;
 }
 
+/* Disclaimer Box */
+.disclaimer-box {
+    padding: 9px 14px;
+    background: #fffbeb;
+    border-top: 1px solid #fef3c7;
+    border-bottom: 1px solid #fef3c7;
+    font-size: 11px;
+    color: #92400e;
+    line-height: 1.45;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.disclaimer-box strong {
+    color: #78350f;
+    font-weight: 700;
+}
+
+.disclaimer-icon {
+    font-size: 13px;
+    flex-shrink: 0;
+}
+
 /* Widget Footer */
 .widget-footer {
     padding: 10px 16px 14px;
     background: #f8fafc;
-    border-top: 1px solid var(--border);
+    border-top: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
