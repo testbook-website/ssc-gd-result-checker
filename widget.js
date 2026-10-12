@@ -3,19 +3,6 @@
  */
 
 (function () {
-    // Category Code Mapping
-    const CATEGORY_MAP = {
-        '0': 'EWS',
-        '1': 'SC',
-        '2': 'ST',
-        '3': 'ESM (Ex-Servicemen)',
-        '4': 'OBC (PWD)',
-        '5': 'SC (PWD)',
-        '6': 'OBC',
-        '7': 'ST (PWD)',
-        '9': 'UR (General)'
-    };
-
     // Shard cache in memory
     const shardCache = new Map();
     let knownPrefixes = null;
@@ -39,7 +26,6 @@
 
     const resOfficialName = document.getElementById('resOfficialName');
     const resRollNumber = document.getElementById('resRollNumber');
-    const resCategory = document.getElementById('resCategory');
     const resList = document.getElementById('resList');
 
     const notRollNumber = document.getElementById('notRollNumber');
@@ -131,7 +117,7 @@
                 rollNumber: roll,
                 resultStatus: isQualified ? 'QUALIFIED' : 'NOT QUALIFIED',
                 officialName: matchResult.name || '',
-                category: matchResult.categoryName || matchResult.cat || '',
+                category: '',
                 gender: matchResult.listName || ''
             });
 
@@ -141,7 +127,6 @@
             if (isQualified) {
                 resOfficialName.textContent = matchResult.name || name;
                 resRollNumber.textContent = roll;
-                resCategory.textContent = matchResult.categoryName || 'UR (General)';
                 resList.textContent = matchResult.listName || (matchResult.g === 'F' ? 'List-1 (Female)' : 'List-2 (Male)');
 
                 qualifiedCard.style.display = 'block';
@@ -190,14 +175,11 @@
         }
 
         if (shardData && shardData[roll]) {
-            const [candName, catCode, gender] = shardData[roll];
-            const catName = CATEGORY_MAP[catCode] || `Category ${catCode}`;
+            const [candName, , gender] = shardData[roll];
             const listName = gender === 'F' ? 'List-1 (Female Candidates)' : 'List-2 (Male Candidates)';
             return {
                 qualified: true,
                 name: candName,
-                cat: catCode,
-                categoryName: catName,
                 g: gender,
                 listName: listName
             };
