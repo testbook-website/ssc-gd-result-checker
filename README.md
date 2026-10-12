@@ -94,10 +94,10 @@ git push -u origin main
 ```
 
 ### Enable GitHub Pages:
-1. In your GitHub repository, go to **Settings** > **Pages**.
+1. In your GitHub repository [testbook-website/ssc-gd-result-checker](https://github.com/testbook-website/ssc-gd-result-checker), go to **Settings** > **Pages**.
 2. Under **Build and deployment** > **Branch**, select `main` and folder `/ (root)`.
 3. Click **Save**.
-4. Your widget will be live at: `https://<YOUR_USERNAME>.github.io/<YOUR_REPO_NAME>/`
+4. Your widget will be live at: `https://testbook-website.github.io/ssc-gd-result-checker/`
 
 ---
 
@@ -109,21 +109,15 @@ Add this HTML snippet to any webpage or WordPress/Blogger site:
 <!-- Responsive SSC GD Result Checker Widget -->
 <div style="display: flex; justify-content: center; width: 100%; padding: 10px;">
   <iframe 
-    src="https://<YOUR_USERNAME>.github.io/<YOUR_REPO_NAME>/" 
+    src="https://testbook-website.github.io/ssc-gd-result-checker/" 
     width="100%" 
     height="580" 
-    style="max-width: 440px; border: none; border-radius: 14px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);"
+    style="max-width: 440px; border: none; border-radius: 14px; box-shadow: 0 4px 20px rgba(0,0,0,0.06);"
     title="SSC GD Constable Result Checker"
-    loading="lazy"
-    allow="clipboard-write">
+    loading="lazy">
   </iframe>
 </div>
 ```
-
-> **Dynamic Deployment ID**: You can pass your Deployment ID directly in the `iframe src` attribute:
-> ```html
-> <iframe src="https://<YOUR_USERNAME>.github.io/<YOUR_REPO_NAME>/?deploymentId=AKfycbx..."></iframe>
-> ```
 
 ---
 
