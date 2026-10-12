@@ -9,11 +9,11 @@
 const CONFIG = {
     // Paste your Google Apps Script Deployment ID here:
     // e.g. "AKfycbxXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-    DEPLOYMENT_ID: "",
+    DEPLOYMENT_ID: "AKfycbzu30nkCNRme9Gmgcl_e0tSJiJfFGJMngktszzk_UOy4eBMU_5MMGCOTkxwphiKnoMI",
 
     // Or paste the complete Google Apps Script Web App URL here:
     // e.g. "https://script.google.com/macros/s/AKfycbx.../exec"
-    WEB_APP_URL: "",
+    WEB_APP_URL: "https://script.google.com/macros/s/AKfycbzu30nkCNRme9Gmgcl_e0tSJiJfFGJMngktszzk_UOy4eBMU_5MMGCOTkxwphiKnoMI/exec",
 
     // Path to the sharded result data folder
     DATA_PATH: "./data/"
